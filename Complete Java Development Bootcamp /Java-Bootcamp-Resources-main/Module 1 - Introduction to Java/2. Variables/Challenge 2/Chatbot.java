@@ -22,7 +22,7 @@ public class Chatbot {
         //add new a line before asking next question.
         System.out.println("\nI hear it's beautiful at " + home + "! I'm from a place called Oracle");
         System.out.println("How old are you?");
-        //Pick up age and store it.
+        //Pick up age and sto re it.
         int age = scan.nextInt();
 
         //add new a line before asking next question.
