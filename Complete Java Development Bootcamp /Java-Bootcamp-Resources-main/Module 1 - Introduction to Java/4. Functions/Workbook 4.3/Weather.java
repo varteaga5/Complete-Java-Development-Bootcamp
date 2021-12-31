@@ -10,7 +10,7 @@ public class Weather {
         printTemperatures(midnight);
         
         
-    }
+    
 
     //Task 1: Make a function here. See the doc comments below. 
 
