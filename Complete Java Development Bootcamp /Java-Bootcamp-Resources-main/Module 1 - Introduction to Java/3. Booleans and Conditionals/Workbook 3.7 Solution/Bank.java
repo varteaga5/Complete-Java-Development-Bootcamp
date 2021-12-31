@@ -2,6 +2,28 @@ import java.util.Scanner;
 
 public class Bank {
     public static void main(String[] args) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         Scanner scan = new Scanner(System.in);
         System.out.println("\n****ROYAL BANK OF JAVA****");
         System.out.println("Are you here to get a mortgage? (yes or no)");
