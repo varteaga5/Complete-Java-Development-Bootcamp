@@ -6,19 +6,29 @@ public class JavaMart {
         System.out.println("Can I get this car?");
        
         //if you have enough money
+        if (wallet > toyCar) {
             //       print: Sure!
-            //       pay for the toy car 
+            System.out.println("Sure!");
+            //       pay for the toy car
+            wallet -= toyCar; 
+        } else {
+            //else:  Sorry, I only have <wallet> left.
+            System.out.println("Sorry, I only have " + wallet + " left.");
+        }
 
-        //else:  Sorry, I only have <wallet> left.
 
         
         double nike = 95.99;       //run test case with 89.99
         System.out.println("Can I get these nike shoes?");
         //if you have enough money
+        if (wallet > nike) {
             //       print: Sure!
+            System.out.println("Sure!");
             //       pay for the nike shoes 
-
+            wallet -= nike;            
+        }
         //else: Sorry, I only have <wallet> left.
+        System.out.println("Sorry Squirt, I only have " + wallet + " left.");
 
     }
 }
