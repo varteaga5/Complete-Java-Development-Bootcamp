@@ -23,14 +23,14 @@ echo Hello Vincent!
 #     echo "hello vINCENT"
 # fi
 
-# IF ELSE
+IF ELSE
 
-# if [ "$NAME" == "VINCENT" ]
-# then
-#     echo "hello vINCENT"
-# else 
-#     echo "Your name is NOT Vincent"
-# fi
+if [ "$NAME" == "VINCENT" ]
+then
+    echo "hello vINCENT"
+else 
+    echo "Your name is NOT Vincent"
+fi
 
 # else if elif
 # if [ "$NAME" == "VINCENT" ]
@@ -43,9 +43,9 @@ echo Hello Vincent!
 #     echo "your name is not brad"
 # fi
 
-# comparison operators
-# val1 -eq val2     returns true if the values are equal
-# val1 -ne val2     returns true if the values are NOT equal
+comparison operators
+val1 -eq val2     returns true if the values are equal
+val1 -ne val2     returns true if the values are NOT equal
 # val1 -gt val2     returns true if the val1 greater than val2
 # val1 -ge val2     returns true if the val1 greater than or equal to val2
 # val1 -lt val2     returns true if the val1 less than val2
@@ -65,28 +65,28 @@ echo Hello Vincent!
 
 # FILE="test.txt"
 
-# -d file       true if the file is in the directory
-# -e file       true if the file exists note that this is not portable thus -f is generally used
-# -f file       true if the provided string is a file
-# -g file       true if the group id is set on a file
-# -r file       true if the file is readable
-# -s file       true if the file has a non zero size
-# -u            true if the user id is set on a file
-# -w            true if the file is writable
+-d file       true if the file is in the directory
+-e file       true if the file exists note that this is not portable thus -f is generally used
+-f file       true if the provided string is a file
+-g file       true if the group id is set on a file
+-r file       true if the file is readable
+-s file       true if the file has a non zero size
+-u            true if the user id is set on a file
+-w            true if the file is writable
 
-# if [ -f "$FILE" ]
-# then 
-#     echo "$FILE is a file"
-# else 
-#     echo "$FILE is NOT a file"
-# fi
+if [ -f "$FILE" ]
+then 
+    echo "$FILE is a file"
+else 
+    echo "$FILE is NOT a file"
+fi
 
-# if [ -e "$FILE" ]
-# then 
-#     echo "$FILE exists"
-# else 
-#     echo "$FILE does not exist"
-# fi
+if [ -e "$FILE" ]
+then 
+    echo "$FILE exists"
+else 
+    echo "$FILE does not exist"
+fi
 
 # case statements
 
