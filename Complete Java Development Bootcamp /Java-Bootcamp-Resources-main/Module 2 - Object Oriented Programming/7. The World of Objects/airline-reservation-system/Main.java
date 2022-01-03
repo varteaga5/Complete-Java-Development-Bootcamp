@@ -11,7 +11,7 @@ public class Main {
         System.out.println(p1.nationality);
         System.out.println(Arrays.toString(p1.passport));
         System.out.println(p1.seatNumber);
+
+        System.out.println("Name: " + p1.name + "\n" + "Nationality: " + p1.nationality + "\n" + "Date of Birth: " + p1.dateOfBirth + "\n" + "Seat Number: " + p1.seatNumber + "\n");
     }
-  
-  
 }
