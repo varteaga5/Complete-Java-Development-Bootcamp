@@ -1,4 +1,5 @@
 import java.io.ObjectInputStream.GetField;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Person {
@@ -9,11 +10,11 @@ public class Person {
     private int seatNumber;
 
     // Constructor method
-    public Person(String name, String nationality, String dateOfBirth, String[] passport, int seatNumber){
+    public Person(String name, String nationality, String dateOfBirth, int seatNumber){
         this.name = name;
         this.nationality = nationality;
         this.dateOfBirth = dateOfBirth;
-        this.passport = passport;
+        this.passport = new String[3];
         this.seatNumber = seatNumber;
     }
     // Copy constructor
@@ -21,7 +22,7 @@ public class Person {
         this.name = source.name;
         this.nationality = source.nationality;
         this.dateOfBirth = source.dateOfBirth;
-        this.passport = source.passport;
+        this.passport = Arrays.copyOf(source.passport, source.passport.length);
         this.seatNumber = source.seatNumber;
     }
 
@@ -38,6 +39,9 @@ public class Person {
     public int getSeatNumber(){
         return this.seatNumber;
     }
+    public String[] getPassport(){
+        return Arrays.copyOf(this.passport, this.passport.length);
+    }
 
     // Setter methods
     public String setName(String name){
@@ -51,6 +55,9 @@ public class Person {
     }    
     public int setSeatNumber(int seatNumber){
         return this.seatNumber = seatNumber;
+    }
+    public void setPassport(){
+         this.passport = new String[] {this.name, this.nationality,this.dateOfBirth};
     }
 
     public boolean applyPassport(){
