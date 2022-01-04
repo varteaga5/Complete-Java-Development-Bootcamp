@@ -1,4 +1,5 @@
 import java.io.ObjectInputStream.GetField;
+import java.util.Random;
 
 public class Person {
     private String name;
@@ -52,12 +53,13 @@ public class Person {
         return this.seatNumber = seatNumber;
     }
 
-    public void applyPassport(){
-        System.out.println("passport");
+    public boolean applyPassport(){
+        return Math.random() < 0.5;
     }
     
     public void chooseSeat() {
-        System.out.println("passport");
-        
+        double randNum = Math.random() * 11;
+        randNum += 1;
+        this.seatNumber = (int)randNum;
     }
 }
