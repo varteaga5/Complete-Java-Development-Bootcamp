@@ -9,12 +9,7 @@ public class Main {
             p1.setPassport();
         }
 
-        System.out.println("Name: " + p1.getName() + "\n" + 
-        "Nationality: " + p1.getNationality() + "\n" + 
-        "Date of Birth: " + p1.getDateOfBirth() + "\n" +
-        "Seat Number: " + p1.getSeatNumber() + "\n" + "Passport: " +
-        Arrays.toString(p1.getPassport()) + "\n");
-
+        System.out.println(p1);
         // Person p1 = new Person("vaa", "usa", "42069", new String []{"vaa", "usa", "42069"}, 8 );
         
         // // Person p1Clone = new Person(p1);
