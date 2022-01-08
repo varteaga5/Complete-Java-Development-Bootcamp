@@ -6,4 +6,4 @@ public class Booleans {
         System.out.println(bool1);
         System.out.println(bool2);
     }
-}
+}    
