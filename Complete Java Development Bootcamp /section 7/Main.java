@@ -4,22 +4,30 @@
 public class Main {
 
     public static void main(String[] args) {
-        Car nissan = new Car();
+        String[] parts = {"tires", "keys"};
+        Car nissan = new Car("nissan", 5000, 2020, "red", parts);
+        Car dodge = new Car("dodge", 8500, 2019, "", parts);
 
-        nissan.make = "Nissan";
-        nissan.price = 5000;
-        nissan.year = 2010;
-        nissan.color = "blue";
+        Car nissan2 = new Car(nissan);
+        nissan2.setColor("yellow");
+        nissan2.setParts(new String[] {"tires", "filter"});
 
-        Car dodge = new Car();
-        dodge.make = "Dodge";
-        dodge.price = 3500;
-        dodge.year = 2020;
-        dodge.color = "red";
+        Dealership dealership = new Dealership();
 
-        System.out.println("This " + nissan.make + " is worth $" + nissan.price + ". It was built in " + nissan.year + ". It is " + nissan.color + ".\n");
+        // System.out.println("This " + nissan.make + " is worth $" + nissan.price + ". It was built in " + nissan.year + ". It is " + nissan.color + ".\n");
 
-        System.out.println("This " + dodge.make + " is worth $" + dodge.price + ". It was built in " + dodge.year + ". It is " + dodge.color + ".\n");
+        // System.out.println("This " + dodge.make + " is worth $" + dodge.price + ". It was built in " + dodge.year + ". It is " + dodge.color + ".\n");
+
+        // nissan.make = "Nissan";
+        // nissan.price = 5000;
+        // nissan.year = 2010;
+        // nissan.color = "blue";
+
+        // Car dodge = new Car();
+        // dodge.make = "Dodge";
+        // dodge.price = 3500;
+        // dodge.year = 2020;
+        // dodge.color = "red";
 
 
 
