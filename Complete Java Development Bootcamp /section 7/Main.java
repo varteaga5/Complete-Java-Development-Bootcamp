@@ -5,12 +5,18 @@ public class Main {
 
     public static void main(String[] args) {
         String[] parts = {"tires", "keys"};
+
         Car nissan = new Car("nissan", 5000, 2020, "red", parts);
         Car dodge = new Car("dodge", 8500, 2019, "", parts);
-
+        // create a new object of car, to avoid setting object variables equal to each other, this uses the copy constructor.
         Car nissan2 = new Car(nissan);
         nissan2.setColor("yellow");
         nissan2.setParts(new String[] {"tires", "filter"});
+
+        nissan.drive();
+        nissan2.drive();
+        dodge.drive();
+        
 
         Dealership dealership = new Dealership();
 
