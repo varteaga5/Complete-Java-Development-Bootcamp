@@ -79,4 +79,12 @@ public class Car {
         System.out.println("you bought this beautiful car");
         System.out.println("please drive your car to the nearest exit.\n");
     }
+    // java will automatically call this when printing the object
+    public String toString() {
+        return "Make: " + this.make + ".\n" 
+        + "Price: " + this.price + ".\n" 
+        + "Year: " + this.year + ".\n" 
+        + "Color: " + this.color + ".\n" 
+        + "Parts: " + Arrays.toString(parts) + ".\n"; 
+    }
 }
