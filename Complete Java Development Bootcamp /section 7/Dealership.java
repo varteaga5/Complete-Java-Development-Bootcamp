@@ -5,9 +5,11 @@ public class Dealership {
     private Car[] cars;
 
     // constructor
-    public Dealership() {
-        this.cars = new Car[3];
-        System.out.println(Arrays.toString(this.cars));
+    public Dealership(Car[] cars) {
+        this.cars = new Car[cars.length];
+        for (int i = 0; i < cars.length; i++) {
+            this.cars[i] = new Car(cars[i]);
+        }
     }
 
     // getters

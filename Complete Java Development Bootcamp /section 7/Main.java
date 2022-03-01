@@ -8,14 +8,14 @@ public class Main {
         Car[] cars = new Car[] {
             new Car("Nissan", 5000, 2020, "red", new String[] {"tires", "keys"}),
             new Car("Dodge", 8500, 2019, "blue", new String[] {"tires", "keys"}),
-            new Car("Nissan", 5000, 2020, "yellow", new String[] {"tires", "filter"})
+            new Car("Nissan", 5000, 2020, "yellow", new String[] {"tires", "filter"}),
+            new Car("Honda", 7000, 2019, "orange", new String[] {"tires", "filter"}),
+            new Car("Mercedes", 12000, 2015, "jet black", new String[] {"tires", "filter", "tranny"})
         };
 
-        Dealership dealership = new Dealership();
+        Dealership dealership = new Dealership(cars);
 
-        for (int i = 0; i < cars.length; i++) {
-            dealership.setCar(cars[i], i);
-        };
+       System.out.println(dealership);
 
      
         dealership.sell(2);
