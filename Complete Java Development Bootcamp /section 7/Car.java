@@ -9,13 +9,13 @@ import java.util.Arrays;
 // 1. setters
 
 public class Car {
-    
+    // fields
     private String make;
     private double price;
     private int year;
     private String color;
     private  String[] parts;
-
+    // constructor
     public Car(String make, double price, int year, String color, String[] parts){
         this.make = make;
         this.price = price;

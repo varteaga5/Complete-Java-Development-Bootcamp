@@ -21,4 +21,9 @@ public class Dealership {
 
     }
 
+    public void sell(int index) {
+        this.cars[index].drive();
+        this.cars[index] = null;
+    }
+
 }

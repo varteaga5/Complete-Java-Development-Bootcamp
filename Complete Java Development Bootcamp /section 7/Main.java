@@ -18,7 +18,7 @@ public class Main {
         };
 
      
-        System.out.println(newCar);
+        dealership.sell(2);
 
 
         // String[] parts = {"tires", "keys"};
