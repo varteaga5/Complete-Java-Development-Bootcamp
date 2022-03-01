@@ -61,7 +61,12 @@ public class Person {
     }
 
     public boolean applyPassport(){
-        return Math.random() < 0.5;
+        int number = (int) (Math.random() * 2);  
+        if (number == 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
     
     public void chooseSeat() {
