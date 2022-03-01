@@ -19,7 +19,7 @@ public class Main {
 
      
         dealership.sell(2);
-        System.out.println(dealership.search("Dodge", 10000));
+        System.out.println(dealership);
 
 
         // String[] parts = {"tires", "keys"};
