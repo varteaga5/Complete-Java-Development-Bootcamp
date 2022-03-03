@@ -1,10 +1,10 @@
 public class Conditionals {
     public static void main(String[] args) {
 
-        int age = 24;
+        int age = 16;
         double debt = 4000;
 
-        String creditScore = debt > 0 ? "Good" : "Bad";
+        String creditScore = debt <= 0 ? "Good" : "Bad";
         boolean canApply = age < 18;
 
         if (!canApply && creditScore.equals("Good")) {
