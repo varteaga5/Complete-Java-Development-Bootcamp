@@ -6,9 +6,9 @@ public class TicTacToe {
             {'_', '_', '_'}
         };
         
-        for (int i = 0; i < array.length; i++) {
-               array[i][2-i] = 'O';
-               array[2-i][2-i] = 'X';
+        for (int i = 0; i < array.length; i++) {        
+            array[2-i][2-i] = 'X';
+            array[i][2-i] = 'O';
         }
 
         printArray(array);
