@@ -33,7 +33,9 @@ public class Item {
         return quantity;
     }
     public void setName(String name) {
-        
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException();
+        }
         this.name = name;
     }
     public void setPrice(double price) {
