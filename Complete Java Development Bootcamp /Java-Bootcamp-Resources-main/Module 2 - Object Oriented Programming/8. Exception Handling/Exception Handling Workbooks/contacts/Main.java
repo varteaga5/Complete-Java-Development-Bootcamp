@@ -1,6 +1,30 @@
+import java.text.ParseException;
+
+import models.Contact;
+
 public class Main {
     public static void main(String[] args) {
+
+        try {
+
+            Contact contact1 = new Contact("Joe", "555", "08453453/11/1989");
+            Contact contact2 = new Contact(contact1);
+            System.out.println(contact1);
+
+        } catch (ParseException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println("Process Complete.");
+        }
         
+        
+
+        
+
+        
+
+
+
       
         
     }
