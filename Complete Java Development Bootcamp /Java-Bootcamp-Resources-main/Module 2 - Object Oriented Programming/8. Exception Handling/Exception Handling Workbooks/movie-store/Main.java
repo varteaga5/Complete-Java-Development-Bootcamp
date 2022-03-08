@@ -1,6 +1,11 @@
+import models.Movie;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("\n********************JAVA VIDEO STORE********************\n");
+
+        Movie m = new Movie("Matrix", "dvd", 9);
+        System.out.println(m);
 
     }
 
