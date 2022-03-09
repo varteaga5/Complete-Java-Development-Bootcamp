@@ -31,7 +31,7 @@ public class Movie {
         this.name = source.name;
         this.format = source.format;
         this.rating = source.rating;
-        this.isAvailable = true;
+        this.isAvailable = source.isAvailable;
         this.sellingPrice = source.sellingPrice;
         this.rentalPrice = source.rentalPrice;
     }
@@ -95,7 +95,4 @@ public class Movie {
             "\t Rental Price: " + rentalPrice + "\n" +
             "\t Availability: " + (this.isAvailable ? "in-stock" : "rented") + "\n";
     }
-
-
-
 }

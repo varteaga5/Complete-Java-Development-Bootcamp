@@ -15,12 +15,11 @@ public class Main {
         try {
             loadMovies("movies.txt");
         } catch (FileNotFoundException e) {
-            //TODO: handle exception
             System.out.println(e.getMessage());
         } finally {
             System.out.println("MOVIES LOADED\n\n" + s );
+            manageMovies();
         }
-        manageMovies();
 
     }
 
@@ -38,24 +37,32 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         while (true) {
             System.out.println("\nWould you like to \n\ta) purchase\n\tb) rent \n\tc) return.");
-            if (scan.nextLine().equalsIgnoreCase("a")) {
-                System.out.println("please enter the name of the movie: ");
-                s.action(scan.next(), "sell");
-                System.out.println("\n\nUPDATED MOVIES\n\n" + s);
-            } else if (scan.nextLine().equalsIgnoreCase("b")) {
-                System.out.println("please enter the name of the movie: ");
-                s.action(scan.next(), "rent");
-                System.out.println("\n\nUPDATED MOVIES\n\n" + s);
-            } else if (scan.nextLine().equalsIgnoreCase("c")) {
-                System.out.println("please enter the name of the movie: ");
-                s.action(scan.next(), "return");
-                System.out.println("\n\nUPDATED MOVIES\n\n" + s);
+            String response = scan.nextLine();
+            if (!(response.equalsIgnoreCase("a") || response.equalsIgnoreCase("b") || response.equalsIgnoreCase("c"))) {
+                scan.close();
+                break;
             }
+            
+            System.out.print("Enter the name of the movie: ");
+            String name = scan.nextLine();
+            if (s.getMovies(name) == null) {
+                System.out.println("\n\nThe input you provided is not valid. Please try again\n");
+                continue;
+            }
+            switch(response) {
+                case "a": 
+                if (!(s.getMovies(name).isAvailable())) {
+                    System.out.println("\n\n\n\nThe movie is not available for purchase. Please try again\n");
+                    continue;
+                }
+                s.action(name, "sell"); break;
+                case "b": s.action(name, "rent"); break;
+                case "c": s.action(name, "return"); break;
+            }
+            System.out.println("\n\nUPDATED MOVIES\n\n" + s);
         }
         // scan.close();
     }
-
-
     /**
      * Name: loadMovies
      * @param fileName (String)
