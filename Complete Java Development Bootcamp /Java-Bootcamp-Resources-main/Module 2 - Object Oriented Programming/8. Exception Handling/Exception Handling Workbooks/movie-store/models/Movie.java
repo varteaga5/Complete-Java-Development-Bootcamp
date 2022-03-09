@@ -14,7 +14,7 @@ public class Movie {
         if(name == null || name.isBlank()) {
             throw new IllegalArgumentException("name cannot be null or blank.");
         }
-        if (!format.equalsIgnoreCase("blue-ray") || !format.equalsIgnoreCase("dvd")) {
+        if (!format.equalsIgnoreCase("blue-ray") && !format.equalsIgnoreCase("dvd")) {
             throw new IllegalArgumentException("format must be blue-ray or dvd.");
         }
         if (rating < 0 || rating > 10) {
@@ -61,7 +61,7 @@ public class Movie {
         this.name = name;
     }
     public void setFormat(String format) {
-        if (!format.equalsIgnoreCase("blue-ray") || !format.equalsIgnoreCase("dvd")) {
+        if (!format.equalsIgnoreCase("blue-ray") && !format.equalsIgnoreCase("dvd")) {
             throw new IllegalArgumentException("format must be blue-ray or dvd.");
         }
         if(format == null || format.isBlank()) {
