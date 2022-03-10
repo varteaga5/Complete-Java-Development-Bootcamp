@@ -75,6 +75,9 @@ public class Cart {
             "\tTax: $" + taxAmount + "\n" +
             "\tTotal: $" + total + "\n";
     }
+    public boolean isEmpty() {
+        return this.items.isEmpty();
+    }
     public String toString() {
         String temp = "";
         for (int i = 0; i < this.items.size(); i++) {
